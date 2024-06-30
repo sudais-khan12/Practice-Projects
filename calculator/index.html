@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculator">
+        <form>
+          <div class="display">
+            <input
+              type="text"
+              id="display"
+              name="display"
+              style="
+                background-color: #aaaaaa;
+                box-shadow: #110605 0px 0px 0px, #000 0px 0px 0px;
+                top: 0;
+              "
+              disabled
+            />
+          </div>
+          <div>
+            <input type="button" value="AC" onClick="display.value = ''" />
+            <input
+              type="button"
+              value="DE"
+              onClick="display.value = display.value.toString().slice(0, -1)"
+            />
+            <input type="button" value="." onClick="display.value += '.'" />
+            <input type="button" value="/" onClick="display.value += '/'" />
+            <input type="button" value="Sqrt" style="width: 90px;" id="sqrt"/>
+          </div>
+          <div id="btn">
+            <input type="button" value="7" onClick="display.value += '7'" />
+            <input type="button" value="8" onClick="display.value += '8'" />
+            <input type="button" value="9" onClick="display.value += '9'" />
+            <input type="button" value="*" onClick="display.value += ' * '" />
+            <input type="button" value="sin" style="width: 90px;" id="sin"/>
+          </div>
+          <div>
+            <input type="button" value="4" onClick="display.value += '4'" />
+            <input type="button" value="5" onClick="display.value += '5'" />
+            <input type="button" value="6" onClick="display.value += '6'" />
+            <input type="button" value="-" onClick="display.value += ' - '" />
+            <input type="button" value="cos" style="width: 90px;" id="cos"/>
+          </div>
+          <div>
+            <input type="button" value="1" onClick="display.value += '1'" />
+            <input type="button" value="2" onClick="display.value += '2'" />
+            <input type="button" value="3" onClick="display.value += '3'" />
+            <input type="button" value="+" onClick="display.value += ' + '" />
+            <input type="button" value="tan" style="width: 90px;" id="tan"/>
+          </div>
+          <div>
+            <input type="button" value="0" onClick="display.value += '0'" />
+            <input type="button" value="X**" id="square"/>
+            <input type="button" value="X***" id="cube"/>
+            <input type="button" value="log" id="log"/>
+            <input type="button" value="=" class="equal" style="width: 90px;"/>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="work.js"></script>
+  </body>
+</html>
