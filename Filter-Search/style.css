@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Oswald", sans-serif;
+}
+
+.css1 {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.css2 {
+  width: 60%;
+  height: 80%;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.carsDisplay {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 50px;
+  overflow: auto;
+}
+
+.carDisplay {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px;
+  transition: 1s;
+  animation: 1s fadeIn;
+}
+
+.carDisplay img:hover {
+  filter: grayscale(0);
+  transition: 1s;
+}
+
+.carDisplay img {
+  filter: grayscale(1);
+  width: 90%;
+  transition: 1s;
+  border-radius: 5px;
+}
+
+.cssFilters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cssFilters input {
+  padding: 7px 10px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.cssFilters select {
+  padding: 7px 10px;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .css2 {
+    width: 80%;
+    height: 85%;
+  }
+
+  .carsDisplay {
+    grid-template-columns: 1fr 1fr;
+    row-gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .css1 {
+    height: auto;
+    padding: 20px;
+  }
+
+  .css2 {
+    width: 90%;
+    height: auto;
+  }
+
+  .carsDisplay {
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+  }
+
+  .carDisplay {
+    width: 100%;
+    margin: 10px;
+  }
+
+  .cssFilters {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .css1 {
+    padding: 10px;
+  }
+
+  .css2 {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+  }
+
+  .carDisplay img {
+    width: 100%;
+  }
+
+  .cssFilters input,
+  .cssFilters select {
+    width: 90%;
+    margin: 10px 0;
+  }
+}
